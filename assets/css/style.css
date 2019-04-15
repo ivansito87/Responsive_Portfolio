@@ -202,6 +202,7 @@ img {
 	transform: scale(1.2);
 }
 #sticky {
+	height: auto;
 	width: 100%;
 	padding-bottom: 10px;
 	background-color: #666666;
@@ -213,8 +214,13 @@ img {
 	left: 0;
 	border-top: 7px solid #4aaaa5;
 	clear: both;
+	z-index: 10;
+	
 }
-
+.small_text {
+	font-size: 15px;
+	text-shadow:5px 5px 0 #000;
+}
 .relative {
 	position: relative;
 }
@@ -223,7 +229,7 @@ img {
 	position: absolute;
 	top: 150px;
 	color: white;
-	background-color: #666666b2;
+	background-color: #4aaaa5;
 	width: 90%;
 	text-align: center;
 }
@@ -252,81 +258,53 @@ img:hover {
 	color:#EEB211;
 	text-decoration: underline;
 }	
-/********* media queries *******************/
+/**************** media queries ************************/
 
-/* @media screen and (max-width: 768px) {
-    img { 
-		width: 40%;
-		max-width: auto;
-		height: auto;
+
+/***************** media queries 640 px   *******************/
+
+@media only screen and (max-width: 640px) and (min-width: 400.1px) {
+	.main, .page_wrap {
+		 width: 100%;
+		 padding: 30px;
+		}
+	img {
+		width: 100%;
+		padding: 30px;
 	}
 	p {
-		font-size:2.5vw;
+		font-size: 3vw;
 	}
-	.header {
+	h1, h2, h3, h4, h5 {
+		font-size: 4vw;
+	}
+	.name, .my_name {
 		width: 100%;
+		align-items: center;
 	}
-} */
-
-@media screen and (max-width: 640px) {
-	* {
-		margin: 0 auto;
-	}
-    img { 
-		width: 100%;
-		max-width: auto;
-		height: auto;
-		padding: 40px 40px 40px 40px;
-	}
-	h1, .my_name, .name {
-		font-size: 10vw;
-	} 
 	.nav {
 		text-align: center;
+	}
+	.portfolio-item {
 		width: 100%;
-		font-size: 5vw;
-		display: inline-block;
-		padding: 10px;
-		/* background: cover; */
+		display: block;
+		position: relative;
 	}
-	h2, h3, h4, h5 {
-		font-size:6vw;
-	}
-	p {
-		font-size:5vw;
-	}
-	.my_name, .name {
-		text-align: center;
+	.absolute {
 		width: 100%;
-		font-size: 8vw;
+		position: relative;
+		clear: both;
+		z-index: 3;
+		top: -6em;
+		height: 3em;
 	}
-	.page_wrap {
-		margin-right: 30px;
-		margin-left: 30px;
+	.white_and_tail {
+		vertical-align: -15px;
 	}
-}
-/* @media screen and (max-width: 980px) {
-    .header { 
-        width: 100%;
-    }
+	.contact {
+		width: 100%;
+	}
 }
 
-@media screen and (min-width: 700px) {
-    .header {
-        width: 30%;
-    }
-} */
+/************************ media queries 768 px ***********************/
 
-/* .username:after {
-    content:"Insert your user name";
-}
-@media screen and (max-width: 1024px) {
-    .username:before {
-        content:"User name";
-    }
-}
-@media screen and (man-width: 480px) {
-    .username:before {
-        content:"";
-    }
-} */
